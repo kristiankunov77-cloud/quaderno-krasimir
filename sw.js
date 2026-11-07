@@ -1,6 +1,6 @@
 // Tiene in cache i file del Quaderno di Krasimir così si apre anche senza rete.
 // I dati passano sempre da Supabase e non vengono messi in cache qui.
-const CACHE = 'krasimir-v1';
+const CACHE = 'krasimir-v2';
 const FILES = ['./', 'index.html', 'config.js', 'supabase.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => {
